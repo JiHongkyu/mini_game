@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOL Typing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="backgroundImg.jpg" alt="배경사진">
+    <div class="header">
+        <h1>LoL Typing Game</h1>
+        <button>게임시작</button>
+    </div>
+    <div class="main hidden">
+        <img>
+        <h1 class="hidden">Hello</h1>
+        <form>
+        <input type="text" class="typing_input">
+        </form>
+        <div class="bar">
+            <p>남은시간: <span>0</span>초</p>
+            <p>정답개수: <span>0</span>개</p>
+        </div>
+        <button>게임종료</button>
+    </div>
+    <div class="gameEnd hidden">
+        <p>정답개수: <span>0</span></p>
+        <button>다시시작</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
