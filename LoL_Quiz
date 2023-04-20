@@ -18,13 +18,13 @@ const championName = [];
 let num = 0;
 let countDown = 30;
 
-fetch("http://ddragon.leagueoflegends.com/cdn/9.19.1/data/ko_KR/champion.json").then(response => response.json()).then(data => {
+fetch("https://ddragon.leagueoflegends.com/cdn/9.19.1/data/ko_KR/champion.json").then(response => response.json()).then(data => {
     for(let key in data.data) {
         champion.push(key);
     }
 });
 
-fetch("http://ddragon.leagueoflegends.com/cdn/9.19.1/data/ko_KR/champion.json").then(response => response.json()).then(data => {
+fetch("https://ddragon.leagueoflegends.com/cdn/9.19.1/data/ko_KR/champion.json").then(response => response.json()).then(data => {
     for(let value of Object.values(data.data)) {
         championName.push(value.name);
     }
@@ -44,7 +44,7 @@ function countDownTime() {
 
 function randomWord() {
     const random = parseInt(Math.random() * champion.length);
-    fetch(`http://ddragon.leagueoflegends.com/cdn/9.19.1/img/champion/${champion[random]}.png`).then(response => img.src = response.url);
+    fetch(`https://ddragon.leagueoflegends.com/cdn/9.19.1/img/champion/${champion[random]}.png`).then(response => img.src = response.url);
     h1.innerText = championName[random];
 }
 
